@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/line_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doctor Name: Ajit Saste"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/line_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hospital Address: Pimpri"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/line_c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Exp: 5 yrs"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/line_d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile No: 9898989898"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/line_e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cons Fess: 600/-"
+        android:textSize="14sp" />
+
+</LinearLayout>
