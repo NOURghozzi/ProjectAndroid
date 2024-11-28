@@ -9,6 +9,14 @@
     <string name="montant">Montant</string>
     <string name="Entrée_montant">Entrée montant</string>
     <string name="Montant">Montant</string>
+    <string name="welcome_to_our_first_application">Welcome to our first application</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="lab_test">  LAB TEST</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat</string>
 
     <string-array name="currency_array">
         <item>Dinar</item>

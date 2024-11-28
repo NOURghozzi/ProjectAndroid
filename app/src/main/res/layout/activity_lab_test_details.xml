@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/labtest"
+    android:background="#C8C1E5FD"
     tools:context=".LabTestDetailsActivity">
 
     <TextView
@@ -80,7 +80,7 @@
     <Button
         android:id="@+id/buttonLDAddToCart"
         android:layout_width="174dp"
-        android:layout_height="44dp"
+        android:layout_height="54dp"
         android:layout_marginBottom="8dp"
         android:text="Add To Cart "
         app:layout_constraintBottom_toTopOf="@+id/buttonLDBack"
@@ -94,7 +94,7 @@
         android:layout_height="42dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textColor="@color/darkyellow"
+        android:textColor="#766B00"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/buttonLDAddToCart"
         app:layout_constraintEnd_toEndOf="parent"
