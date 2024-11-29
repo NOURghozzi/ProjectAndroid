@@ -15,22 +15,13 @@
         android:layout_gravity="center"
         android:backgroundTint="@color/button_background"
         android:baselineAligned="false"
+        android:text="@string/welcome_to_healthcare_on_24_7"
         android:textColor="@color/color_text"
-        android:text="@string/welcome_to_our_first_application"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.576"
-        tools:ignore="MissingConstraints" />
-
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="408dp"
-        android:layout_height="378dp"
-        app:srcCompat="@drawable/img_1"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="5dp"
+        app:layout_constraintVertical_bias="0.477"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

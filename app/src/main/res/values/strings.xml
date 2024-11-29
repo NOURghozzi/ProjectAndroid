@@ -17,6 +17,8 @@
     <string name="home">Home</string>
     <string name="profile">Profile</string>
     <string name="chat">Chat</string>
+    <string name="welcome_to_healthcare_on_24_7">mainxml</string>
+    <string name="confirm_password">confirmPasswor</string>
 
     <string-array name="currency_array">
         <item>Dinar</item>

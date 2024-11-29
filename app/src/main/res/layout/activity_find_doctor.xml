@@ -21,12 +21,12 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="12dp"
-        android:text="24*7 HEALTHCARE"
-        android:textColor="#fff"
-        android:textSize="20sp"
+        android:layout_marginTop="24dp"
+        android:text="24*7 Health Care"
+        android:textColor="#250581"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:layout_width="298dp"
         android:layout_height="535dp"
         android:layout_below="@+id/titleFindDoctorTop"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="10sp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:layout_marginStart="50dp"
@@ -87,7 +87,7 @@
                     android:text="FAMILY PHYSICIANS "
                     android:textAlignment="center"
                     android:textColor="@color/button_text"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -122,11 +122,11 @@
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="23dp"
                     android:text="dietician"
                     android:textAlignment="center"
                     android:textColor="@color/button_text"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -163,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="DENTIST"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:textAlignment="center"
                     android:textColor="@color/button_text"
                     android:textStyle="bold" />
@@ -204,7 +204,7 @@
                     android:text="SURGEON"
                     android:textAlignment="center"
                     android:textColor="@color/button_text"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -242,7 +242,7 @@
                     android:layout_height="wrap_content"
                     android:text="CARDIOLOGISTS"
                     android:textAlignment="center"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:textColor="@color/button_text"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -282,7 +282,7 @@
                     android:text="BACK"
                     android:textAlignment="center"
                     android:textColor="@color/button_text"
-                    android:textSize="10dp"
+                    android:textSize="10sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -294,36 +294,30 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="2dp"
-        android:background="#FFFFFF"
+        android:background="#CDE7FB"
         android:elevation="4dp"
         android:gravity="center"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/iconHome"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:contentDescription="@string/home"
-            android:padding="4dp"
-            android:layout_marginEnd="56dp"
-            android:src="@drawable/img_10" />
+
 
         <ImageView
             android:id="@+id/iconProfile"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+
+            android:layout_width="75dp"
+            android:layout_height="56dp"
             android:contentDescription="@string/profile"
             android:padding="4dp"
             android:layout_marginEnd="56dp"
-            android:src="@drawable/img_19" />
+            android:src="@drawable/icons8" />
 
         <ImageView
             android:id="@+id/iconChat"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
             android:contentDescription="@string/chat"
             android:padding="4dp"
-            android:src="@drawable/img_18" />
+            android:src="@drawable/img_10" />
     </LinearLayout>
 
 

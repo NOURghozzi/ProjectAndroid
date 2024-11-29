@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,72 +14,76 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class LabTestActivity extends AppCompatActivity {
-    private String[][] packages =
-            {
-                    {"Package1: Full Body Checkup","","","","999"},
-                    {"Package2: Blood Glucose Fasting","","","","299"},
-                    {"Package3: COVID-19 Antibody","","","","899"},
-                    {"Package4: Thyroid Check","","","","499"},
-                    {"Package5: Immunity Check ","","","","699"},
-            };
-    private String [] package_details = {
-            "Blood Glucose Fasting \n"+
-                    "HbA1c \\n"+
-                    "Iron Studies \n"+
-                    "Kidney Function Test\n"+
-                    "LDH Lactate Dehydrogenase , Serum \n"+
-                    "Lipid Profile \n"+
-                    "Liver Function Test",
+
+    // Define your packages with improved readability
+    private String[][] packages = {
+            {"Package1 : Full Body Checkup", "Description: Comprehensive health checkup covering vital tests.", "Duration: 1 hour", "Price: 999", "Notes: Ideal for overall health monitoring."},
+        {"Package2: Blood Glucose Fasting", "Description: Test for fasting blood glucose levels to check for diabetes.", "Duration: 30 minutes", "Price: 299", "Notes: Recommended for early diabetes detection."},
+        {"Package3: COVID-19 Antibody", "Description: Test to determine immunity from COVID-19.", "Duration: 30 minutes", "Price: 899", "Notes: Important for post-vaccination or recovery monitoring."},
+        {"Package4: Thyroid Check", "Description: Test to assess thyroid function and detect any abnormalities.", "Duration: 45 minutes", "Price: 499", "Notes: Recommended for individuals with fatigue or weight issues."},
+        {"Package5: Immunity Check", "Description: Test to evaluate the strength of your immune system.", "Duration: 1 hour", "Price: 699", "Notes: Helps in understanding your body's defense mechanisms."}
+
+        };
+
+    // Define the details for each package
+    private String[] packageDetails = {
+            "Blood Glucose Fasting\nHbA1c\nIron Studies\nKidney Function Test\nLDH Lactate Dehydrogenase, Serum\nLipid Profile\nLiver Function Test",
             "Lipid Profile"
     };
-    HashMap <String,String> item ;
-    ArrayList list ;
-    SimpleAdapter sa ;
-    Button btnGoToCart, btnBack ;
-    ListView listView ;
+
+    private HashMap<String, String> item;
+    private ArrayList<HashMap<String, String>> list;
+    private SimpleAdapter sa;
+    private Button btnGoToCart, btnBack;
+    private ListView listView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_test);
 
-        btnGoToCart=findViewById(R.id.buttonLDAddToCart);
-        btnBack=findViewById(R.id.buttonLTBack);
-        listView=findViewById(R.id.listViewLT);
+        // Initialize views
+        btnGoToCart = findViewById(R.id.buttonLDAddToCart);
+        btnBack = findViewById(R.id.buttonLTBack);
+        listView = findViewById(R.id.listViewLT);
 
-
+        // Set back button action
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LabTestActivity.this,HomeActivity.class));
+                startActivity(new Intent(LabTestActivity.this, HomeActivity.class));
             }
         });
-        list= new ArrayList();
-        for (int i=0 ; i<packages.length;i++){
-            item = new HashMap<String,String>();
-            item.put("line1",packages[i][0]);
-            item.put("line2",packages[i][1]);
-            item.put("line3",packages[i][2]);
-            item.put("line4",packages[i][3]);
-            item.put("line5","Total Cost "+packages[i][4]+"/-");
+
+        // Prepare data for ListView
+        list = new ArrayList<>();
+        for (int i = 0; i < packages.length; i++) {
+            item = new HashMap<>();
+            item.put("line1", packages[i][0]);
+            item.put("line2", packages[i][1]);
+            item.put("line3", packages[i][2]);
+            item.put("line4", packages[i][3]);
+            item.put("line5", "Total Cost " + packages[i][4] + "/-");
             list.add(item);
         }
-        sa = new SimpleAdapter(this,list,
+
+        // Set SimpleAdapter to ListView
+        sa = new SimpleAdapter(this, list,
                 R.layout.multi_lines,
-                new String[]{"line1","line2","line3","line4","line5"},
-                new int []{R.id.line_a,R.id.line_b,R.id.line_c,R.id.line_d,R.id.line_e}
-        );
+                new String[]{"line1", "line2", "line3", "line4", "line5"},
+                new int[]{R.id.line_a, R.id.line_b, R.id.line_c, R.id.line_d, R.id.line_e});
         listView.setAdapter(sa);
+
+        // Set item click listener
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent it = new Intent(LabTestActivity.this,LabTestDetailsActivity.class);
-                it.putExtra("text1",packages[i][0]);
-                it.putExtra("text2",package_details[i]);
-                it.putExtra("text3",packages[i][4]);
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                Intent it = new Intent(LabTestActivity.this, LabTestDetailsActivity.class);
+                it.putExtra("text1", packages[position][0]);
+                it.putExtra("text2", packageDetails[position]);
+                it.putExtra("text3", packages[position][4]);
                 startActivity(it);
             }
         });
-
-
     }
 }

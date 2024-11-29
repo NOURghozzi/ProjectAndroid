@@ -31,6 +31,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mobile No: 9898989898"
+        android:autoLink="web"
         android:textSize="14sp" />
 
     <TextView

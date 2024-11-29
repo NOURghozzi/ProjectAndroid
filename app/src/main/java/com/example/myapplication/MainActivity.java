@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
 
-        Button but =(Button) findViewById(R.id.butttest);
+        Button but =(Button) findViewById(R.id.convertButton);
         but.setOnClickListener(view -> startActivity(new Intent(MainActivity.this ,LoginActivity.class)));
 
 
