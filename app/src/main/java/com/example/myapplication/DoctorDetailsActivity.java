@@ -17,43 +17,41 @@ import java.util.HashMap;
 public class DoctorDetailsActivity extends AppCompatActivity {
     private final String[][] doctor_details1=
             {
-                    {"Doctor Name: Ajit Saste","Hospital Address:Pimpri","Exp: 5 yrs","Mobile No: 9898989898","600"},
-                    {"Doctor Name: Amira Halouani  ","Hospital Address: Oxford","Exp: 15 yrs","Mobile No :9898989890","400"},
-                    {"Doctor Name: Eya Siala ","Hospital Address:Chinchwad","Exp: 8 yrs","Mobile No :9898989860","900"},
-                    {"Doctor Name:Deapak Deshmukh ","Hospital Address: Katraj","Exp: 6 yrs","Mobile No :9898989850","500"},
-                    {"Doctor Name: Pierre Wajenberg","Hospital Address: Pume","Exp: 7 yrs","Mobile No :9898989840","200"}
+                    {"Ajit Saste", "Pimpri", "nourghozzi9@gmail.com", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "nourghozzi9@gmail.com", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "nourghozzi9@gmail.com", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "nourghozzi9@gmail.com", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "nourghozzi9@gmail.com", "9898989840", "200"}
             };
     private final String[][] doctor_details2=
             {
-                    {"Doctor Name: Ajit Saste","Hospital Address:Pimpri","Exp: 5 yrs","Mobile No: 9898989898","600"},
-                    {"Doctor Name: Amira Halouani  ","Hospital Address: Oxford","Exp: 15 yrs","Mobile No :9898989890","400"},
-                    {"Doctor Name: Eya Siala ","Hospital Address:Chinchwad","Exp: 8 yrs","Mobile No :9898989860","800"},
-                    {"Doctor Name:Deapak Deshmukh ","Hospital Address: Katraj","Exp: 6 yrs","Mobile No :9898989850","800"},
-                    {"Doctor Name: Pierre Wajenberg","Hospital Address: Pume","Exp: 7 yrs","Mobile No :9898989840","200"}
+                    {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}
             };
     private final String[][] doctor_details3=
-            {
-                    {"Doctor Name: Ajit Saste","Hospital Address:Pimpri","Exp: 5 yrs","Mobile No: 9898989898","100"},
-                    {"Doctor Name: Amira Halouani  ","Hospital Address: Oxford","Exp: 15 yrs","Mobile No :9898989890","400"},
-                    {"Doctor Name: Eya Siala","Hospital Address:Chinchwad","Exp: 8 yrs","Mobile No :9898989860","900"},
-                    {"Doctor Name:Deapak Deshmukh ","Hospital Address: Katraj","Exp: 6 yrs","Mobile No :9898989850","500"},
-                    {"Doctor Name: Pierre Wajenberg","Hospital Address: Pume","Exp: 7 yrs","Mobile No :9898989840","200"}
+            { {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}
             };
     private final String[][] doctor_details4=
             {
-                    {"Doctor Name: Ajit Saste","Hospital Address:Pimpri","Exp: 5 yrs","Mobile No: 9898989898","600"},
-                    {"Doctor Name: Amira Halouani  ","Hospital Address: Oxford","Exp: 15 yrs","Mobile No :9898989890","700"},
-                    {"Doctor Name: Eya Siala  ","Hospital Address:Chinchwad","Exp: 8 yrs","Mobile No :9898989860","900"},
-                    {"Doctor Name:Deapak Deshmukh ","Hospital Address: Katraj","Exp: 6 yrs","Mobile No :9898989850","300"},
-                    {"Doctor Name: Pierre Wajenberg","Hospital Address: Pume","Exp: 7 yrs","Mobile No :9898989840","200"}
-            };
+                    {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}  };
     private  final String[][] doctor_details5=
             {
-                    {"Doctor Name: Ajit Saste","Hospital Address:Pimpri","Exp: 5 yrs","Mobile No: 9898989898","400"},
-                    {"Doctor Name: Amira Halouani  ","Hospital Address: Oxford","Exp: 15 yrs","Mobile No :9898989890","400"},
-                    {"Doctor Name: Eya Siala ","Hospital Address:Chinchwad","Exp: 8 yrs","Mobile No :9898989860","860"},
-                    {"Doctor Name:Deapak Deshmukh ","Hospital Address: Katraj","Exp: 6 yrs","Mobile No :9898989850","700"},
-                    {"Doctor Name: Pierre Wajenberg","Hospital Address: Pume","Exp: 7 yrs","Mobile No :9898989840","230"}
+                    {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}
             };
     TextView tv ;
     Button btn ;

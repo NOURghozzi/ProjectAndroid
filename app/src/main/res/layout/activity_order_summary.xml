@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#C8C1E5FD">
+
+    <TextView
+        android:id="@+id/tvOrderSummary"
+        android:layout_width="match_parent"
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="Reservation"
+        android:textColor="#250580"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/listViewOrder"
+        android:layout_width="match_parent"
+        android:layout_height="398dp"
+        android:layout_weight="1" />
+
+
+    <TextView
+        android:id="@+id/tvTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:gravity="end"
+        android:text="Prix total : 0.00"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:padding="16dp" android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnConfirmOrder"
+            android:layout_width="170dp"
+            android:layout_height="61dp"
+            android:layout_gravity="center"
+            android:backgroundTint="#1503A1DA"
+            android:baselineAligned="false"
+            android:text="Confirmer la commande"
+            android:textColor="#2923CC" />
+
+        <Button
+            android:id="@+id/buttonLDBack2"
+            android:layout_width="170dp"
+            android:layout_height="61dp"
+            android:backgroundTint="#250580"
+            android:text="BACK "
+            android:textColor="@color/button_background"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/buttonLDAddToCart"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/buttonLDAddToCart"
+            app:layout_constraintTop_toBottomOf="@id/buttonLDAddToCart"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -4,15 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/health1"
+    android:background="#C8C1E5FD"
     tools:context=".BookAppointmentActivity">
 
+
+    <EditText
+        android:id="@+id/editTextAppFullName"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="40dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Adress"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Full Name"
+
+        android:textColor="@color/button_background"
+        android:textColorHint="@color/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle" />
+
+    <EditText
+        android:id="@+id/editTextAppAddress"
+        android:layout_width="326dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Mail"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+
+
+        android:textColor="@color/button_background"
+        android:textColorHint="@color/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAppFullName" />
 
     <EditText
         android:id="@+id/editTextContactNumber"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Contact Number"
@@ -21,11 +65,10 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/button_background"
+        android:textColorHint="@color/button_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAppAddress" />
 
@@ -33,7 +76,7 @@
         android:id="@+id/editTextAppFees"
         android:layout_width="330dp"
         android:layout_height="48dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="Fees"
@@ -42,10 +85,10 @@
         android:paddingTop="10dp"
         android:paddingRight="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+        android:textColor="@color/button_background"
+        android:textColorHint="@color/button_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.469"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextContactNumber" />
 
@@ -59,98 +102,61 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.556"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.064" />
 
     <TextView
         android:id="@+id/textViewAppTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Book Appointment"
-        android:textColor="@color/white"
-        android:textSize="34sp"
+        android:layout_marginTop="28dp"
+        android:text="defaut "
+        android:textColor="#50A2C7"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <EditText
-        android:id="@+id/editTextAppFullName"
-        android:layout_width="326dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="20dp"
-        android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Full Name"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:text="Full Name"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
+    <Button
+        android:id="@+id/buttonAppBack"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#250580"
+        android:text="BACK "
+        android:textColor="@color/button_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAppTitle" />
-
-    <EditText
-        android:id="@+id/editTextAppAddress"
-        android:layout_width="326dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="20dp"
-       android:drawablePadding="10dp"
-        android:ems="10"
-        android:hint="Adress"
-        android:inputType="textPersonName"
-        android:paddingLeft="20dp"
-        android:paddingTop="10dp"
-        android:paddingRight="10dp"
-        android:paddingBottom="10dp"
-        android:textColor="@color/white"
-        android:textColorHint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.447"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextAppFullName" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonBookAppointment" />
 
     <Button
         android:id="@+id/buttonBookAppointment"
-        android:layout_width="332dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="192dp"
-        android:backgroundTint="#E91E24"
+        android:layout_width="168dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/button_background"
         android:text="Book Appointment"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAppFees" />
-
-    <Button
-        android:id="@+id/buttonAppBack"
-        android:layout_width="332dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/color_text"
-        android:text="BACK"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonBookAppointment" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@color/color_text"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:text="Select Date "
-        android:textColor="@color/button_text"
+        android:textColor="#122380"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.089"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAppFees" />
 
@@ -158,38 +164,96 @@
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
-        android:background="@color/color_text"
+        android:layout_marginTop="20dp"
         android:text=" Select Time"
-        android:textColor="@color/button_text"
+        android:textColor="#122380"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintHorizontal_bias="0.837"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextAppFees" />
 
     <Button
         android:id="@+id/buttonAppDate"
         style="?android:spinnerStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="137dp"
+        android:layout_height="56dp"
         android:text="21/04/23"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        android:textColor="@color/button_background"
+        android:textColorHint="@color/button_background"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.127" />
 
     <Button
         android:id="@+id/buttonAppTime"
         style="?android:spinnerStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_width="137dp"
+        android:layout_height="56dp"
         android:text="10:30"
+        android:textColor="@color/button_background"
+        android:textColorHint="@color/button_background"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="39dp"
+        android:layout_height="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintHorizontal_bias="0.868"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        app:layout_constraintTop_toTopOf="@+id/editTextAppAddress"
+        app:layout_constraintVertical_bias="0.011"
+        app:srcCompat="@drawable/img_30" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="344dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextContactNumber"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/img_31" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="31dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="396dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextAppFullName"
+        app:layout_constraintVertical_bias="0.011"
+        app:srcCompat="@drawable/img_32" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="43dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextAppFees"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/img_33" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -17,7 +17,7 @@ public class LabTestActivity extends AppCompatActivity {
 
     // Define your packages with improved readability
     private String[][] packages = {
-            {"Package1 : Full Body Checkup", "Description: Comprehensive health checkup covering vital tests.", "Duration: 1 hour", "Price: 999", "Notes: Ideal for overall health monitoring."},
+        {"Package1 : Full Body Checkup", "Description: Comprehensive health checkup covering vital tests.", "Duration: 1 hour", "Price: 999", "Notes: Ideal for overall health monitoring."},
         {"Package2: Blood Glucose Fasting", "Description: Test for fasting blood glucose levels to check for diabetes.", "Duration: 30 minutes", "Price: 299", "Notes: Recommended for early diabetes detection."},
         {"Package3: COVID-19 Antibody", "Description: Test to determine immunity from COVID-19.", "Duration: 30 minutes", "Price: 899", "Notes: Important for post-vaccination or recovery monitoring."},
         {"Package4: Thyroid Check", "Description: Test to assess thyroid function and detect any abnormalities.", "Duration: 45 minutes", "Price: 499", "Notes: Recommended for individuals with fatigue or weight issues."},
@@ -27,7 +27,8 @@ public class LabTestActivity extends AppCompatActivity {
 
     // Define the details for each package
     private String[] packageDetails = {
-            "Blood Glucose Fasting\nHbA1c\nIron Studies\nKidney Function Test\nLDH Lactate Dehydrogenase, Serum\nLipid Profile\nLiver Function Test",
+            "Blood Glucose Fasting\nHbA1c\nIron Studies\nKidney Function Test\nLDH Lactate Dehydrogenase,",
+            "Serum\nLipid Profile\nLiver Function Test",
             "Lipid Profile"
     };
 
