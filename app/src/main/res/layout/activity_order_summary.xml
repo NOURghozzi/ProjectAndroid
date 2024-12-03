@@ -9,13 +9,23 @@
     android:background="#C8C1E5FD">
 
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="378dp"
+        android:layout_height="wrap_content"
+        android:text="24*7 HealthCare"
+        android:textColor="#122381"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:gravity="center"
+ />
+    <TextView
         android:id="@+id/tvOrderSummary"
         android:layout_width="match_parent"
         android:layout_height="41dp"
         android:gravity="center"
         android:text="Reservation"
-        android:textColor="#250580"
-        android:textSize="18sp"
+        android:textColor="#50A2C7"
+        android:textSize="30sp"
         android:textStyle="bold" />
 
     <ListView
@@ -36,11 +46,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
+        android:gravity="center"
         android:padding="16dp" android:layout_height="wrap_content">
 
         <Button
             android:id="@+id/btnConfirmOrder"
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="61dp"
             android:layout_gravity="center"
             android:backgroundTint="#1503A1DA"
@@ -50,7 +61,7 @@
 
         <Button
             android:id="@+id/buttonLDBack2"
-            android:layout_width="170dp"
+            android:layout_width="147dp"
             android:layout_height="61dp"
             android:backgroundTint="#250580"
             android:text="BACK "

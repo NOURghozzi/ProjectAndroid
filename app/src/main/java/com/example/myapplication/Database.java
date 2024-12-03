@@ -16,11 +16,11 @@ public class Database extends SQLiteOpenHelper {
 
     private static final String TAG = "Database";
     private static final String DATABASE_NAME = "test.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     private static final String TABLE_USERS = "users";
     private static final String TABLE_CART = "cart";
-
+    private static final String TABLE_APPOINTEMENT = "appointments";
     public Database(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -46,12 +46,14 @@ public class Database extends SQLiteOpenHelper {
         db.execSQL(createCartTable);
 
         Log.d(TAG, "Database tables created.");
+
         String createAppointmentsTable = "CREATE TABLE appointments (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "user_id INTEGER NOT NULL, " +
-                "appointment_date TEXT NOT NULL, " +  // Date et heure du rendez-vous
-                "address TEXT NOT NULL, " +           // Adresse du rendez-vous
-                "phone TEXT NOT NULL, " +             // Téléphone pour le rendez-vous
+                "appointment_date TEXT NOT NULL, " + // Correspond au champ "date"
+                "address TEXT NOT NULL, " +
+                "phone TEXT NOT NULL, " +
+                "title TEXT NOT NULL, " +
                 "FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE)";
         db.execSQL(createAppointmentsTable);
         Log.d(TAG, "Appointments table created.");
@@ -256,53 +258,59 @@ public class Database extends SQLiteOpenHelper {
         db.delete("Cart", "username = ? AND product = ?", new String[]{username, product});
         db.close();
     }
-    public void bookAppointment(int userId, String appointmentDate, String address, String phone) {
-        if (appointmentDate == null || address == null || phone == null) {
-            Log.e(TAG, "Appointment details are incomplete.");
-            return;
-        }
-
+    public void bookAppointment(Appointment appointment) {
+        SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("user_id", userId);
-        values.put("appointment_date", appointmentDate);
-        values.put("address", address);
-        values.put("phone", phone);
+        values.put("appointment_date", appointment.getDate() +" Time "+appointment.getTime() );
+        values.put("address", appointment.getAddress());
+        values.put("phone", appointment.getPhone());
+        values.put("title", "Consultation");
+        values.put("user_id", appointment.getUserId());
 
-        SQLiteDatabase db = null;
-        try {
-            db = getWritableDatabase();
-            long result = db.insert("appointments", null, values);
-            if (result == -1) {
-                Log.e(TAG, "Failed to book appointment.");
-            } else {
-                Log.d(TAG, "Appointment booked successfully.");
-            }
-        } catch (Exception e) {
-            Log.e(TAG, "Error while booking appointment", e);
-        } finally {
-            if (db != null) {
-                db.close();
-            }
+
+        long result = db.insert("appointments", null, values);
+        if (result == -1) {
+            Log.e(TAG, "Failed to book appointment: " + result);
+        } else {
+            Log.d(TAG, "Appointment booked successfully: " + result);
         }
+        db.close();
     }
 
-    public List<String> getAppointmentsByUserId(int userId) {
-        List<String> appointments = new ArrayList<>();
+    public List<Appointment> getAppointmentsByUserId(int userId) {
+        List<Appointment> appointments = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
 
-        String query = "SELECT * FROM appointments WHERE user_id = ?";
+        // Requête SQL pour récupérer les rendez-vous
+        String query = "SELECT appointment_date, address, phone FROM appointments WHERE user_id = ?";
         Cursor cursor = db.rawQuery(query, new String[]{String.valueOf(userId)});
+        Log.e(TAG, "Executing query: " + query);
 
+        // Vérifier si des résultats ont été trouvés
         if (cursor.moveToFirst()) {
             do {
-                appointments.add(cursor.getString(0)); // Ajouter le nom du produit
+                // Récupérer les valeurs des colonnes
+                String date = cursor.getString(0);  // appointment_date
+                String address = cursor.getString(1);  // address
+                String phone = cursor.getString(2);  // phone
+
+                // Créer un objet Appointment et l'ajouter à la liste
+                Appointment appointment = new Appointment("Date: "+date,"Address: " + address, "Phone:"+phone);
+                appointments.add(appointment);
+                Log.d(TAG, "Fetched Appointment:" + appointment);
+
+                //Log.d(TAG, "Fetched Appointment: Date: " + date + ", Address: " + address + ", Phone: " + phone);
             } while (cursor.moveToNext());
+        } else {
+            Log.d(TAG, "No appointments found for user ID: " + userId);
         }
+
         cursor.close();
         db.close();
 
         return appointments;
     }
+
 
 }
 

@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HealthArticlesDetailsActivity extends AppCompatActivity {
 
-    TextView tv1, tvDescription, tvDate;
+    TextView tv1;
     ImageView img;
     Button btnBack;
 
@@ -45,9 +45,7 @@ public class HealthArticlesDetailsActivity extends AppCompatActivity {
             startActivity(browserIntent);
         });
 
-        // Si vous avez une description ou autre info
-        // Exemple de traitement pour description si vous voulez l'afficher quelque part
-        // textViewDescription.setText(description);
+
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

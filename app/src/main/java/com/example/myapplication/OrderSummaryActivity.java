@@ -22,6 +22,7 @@ public class OrderSummaryActivity extends AppCompatActivity {
     ListView listViewOrder;
     TextView tvTotalPrice;
     Button btnConfirmOrder;
+    Button bntback;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +32,13 @@ public class OrderSummaryActivity extends AppCompatActivity {
         listViewOrder = findViewById(R.id.listViewOrder);
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
         btnConfirmOrder = findViewById(R.id.btnConfirmOrder);
-
+        bntback = findViewById(R.id.buttonLDBack2);
         // Get username from intent
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
+        bntback.setOnClickListener(view -> startActivity(new Intent(OrderSummaryActivity.this, LabTestActivity.class)));
 
-        if (username == null || username.isEmpty()) {
+        if (username == null ) {
             Toast.makeText(this, "Username is missing!", Toast.LENGTH_SHORT).show();
             return; // Exit the method if the username is missing
         }

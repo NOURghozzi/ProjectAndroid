@@ -1,42 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:padding="16dp">
-
-    <!-- Affichage de la date, de l'adresse et du téléphone -->
-    <TextView
-        android:id="@+id/tvDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Appointment Date"
-        android:textSize="18sp"
-        android:layout_marginBottom="8dp" />
+    android:padding="16dp"
+    android:background="#C8C1E5FD">
 
     <TextView
-        android:id="@+id/tvAddress"
-        android:layout_width="wrap_content"
+        android:id="@+id/textView"
+        android:layout_width="379dp"
         android:layout_height="wrap_content"
-        android:text="Appointment Address"
-        android:textSize="16sp"
-        android:layout_marginBottom="8dp" />
-
+        android:gravity="center"
+        android:text="24*7 HealthCare"
+        android:textColor="#122381"
+        android:textSize="34sp"
+        android:textStyle="bold" />
     <TextView
-        android:id="@+id/tvPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Appointment Phone"
-        android:textSize="16sp"
-        android:layout_marginBottom="16dp" />
-
-    <!-- RecyclerView pour afficher les rendez-vous -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvAppointments"
+        android:id="@+id/tvOrderSummary"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:padding="8dp"
-        android:divider="@android:color/darker_gray"
-        android:dividerHeight="0.5dp"/>
+        android:layout_height="41dp"
+        android:gravity="center"
+        android:text="Your appointment"
+        android:textColor="#50A2C7"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="612dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:id="@+id/appointments_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="List of appointments"
+            android:orientation="vertical" />
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/topMenu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#CDE7FB"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="56dp"
+            android:contentDescription="@string/profile"
+            android:padding="4dp"
+            android:src="@drawable/icons8" />
+
+        <ImageView
+            android:id="@+id/iconChat"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/chat"
+            android:padding="4dp"
+            android:src="@drawable/img_10" />
+    </LinearLayout>
+
 </LinearLayout>

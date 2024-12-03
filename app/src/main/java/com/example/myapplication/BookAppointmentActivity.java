@@ -1,20 +1,24 @@
 package com.example.myapplication;
 
+import static androidx.fragment.app.FragmentManager.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.TimePicker;
 import android.net.Uri;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -74,28 +78,39 @@ public class BookAppointmentActivity extends AppCompatActivity {
         // Retourner à la page précédente
         btnBack.setOnClickListener(view -> startActivity(new Intent(BookAppointmentActivity.this, FindDoctorActivity.class)));
         btnBook.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("RestrictedApi")
             @Override
             public void onClick(View v) {
-                // Récupérer les informations du formulaire (par exemple, la date, l'adresse et le téléphone)
-                String appointmentDate = "2024-12-05 10:00";  // Exemple de date, à remplacer par celle de l'utilisateur
-                String address = "123 Main St, City";
-                String phone = "123-456-7890";
+                String title = "Consultation"; // Exemple de titre
+                String date = dateButton.getText().toString();
+                String time = timeButton.getText().toString();
+                String address = ed1.getText().toString();
+                String phone = ed3.getText().toString();
+                SharedPreferences sharedPreferences = getSharedPreferences("shared_Prefs", MODE_PRIVATE);
+                String username = sharedPreferences.getString("username", ""); // "default" si non trouvé
+                Log.d(TAG, "Inserting username" + username);
 
-                // Récupérer l'ID de l'utilisateur (exemple avec un ID d'utilisateur déjà connu)
-                int userId = 1; // Remplacez par l'ID réel de l'utilisateur
-
-                // Appeler la méthode pour réserver un rendez-vous
+                if (date.isEmpty() || address.isEmpty() || phone.isEmpty()) {
+                    Toast.makeText(getApplicationContext(), "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Database db = new Database(getApplicationContext());
-                db.bookAppointment(userId, appointmentDate, address, phone);
+                int userId = db.getUserIdByUsername(username); // Remplacer par l'ID réel de l'utilisateur
 
-                // Créer un Intent et passer les informations de l'appointment
-                Intent intent1 = new Intent(BookAppointmentActivity.this, AppointmentListActivity.class);
-                intent1.putExtra("appointment_date", appointmentDate);
-                intent1.putExtra("appointment_address", address);
-                intent1.putExtra("appointment_phone", phone);
+                Log.d(TAG, "Inserting Appointment: " +
+                        "Date: " +dateButton.getText().toString()+
+                        ", Address: " + ed1.getText().toString() +
+                        ", Phone: " +ed3.getText().toString() +
+                        ", User ID: " + userId);
+                // Créer un objet Appointment
+                Appointment appointment = new Appointment(title, date,time, address, phone, userId);
 
-                // Démarrer AppointmentListActivity
-                startActivity(intent1);
+                // Enregistrer dans la base de données
+
+                db.bookAppointment(appointment);
+                Intent intent = new Intent(BookAppointmentActivity.this, AppointmentListActivity.class);
+                startActivity(intent);
+
             }
         });
 

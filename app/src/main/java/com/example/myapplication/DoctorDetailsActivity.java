@@ -25,33 +25,33 @@ public class DoctorDetailsActivity extends AppCompatActivity {
             };
     private final String[][] doctor_details2=
             {
-                    {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
-                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
-                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
-                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
-                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}
+                    {"Ajit Saste", "Pimpri", "nourghozzi9@gmail.com", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "nourghozzi9@gmail.com", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "nourghozzi9@gmail.com", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "nourghozzi9@gmail.com", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "nourghozzi9@gmail.com", "9898989840", "200"}
             };
     private final String[][] doctor_details3=
-            { {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
-                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
-                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
-                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
-                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}
+            {  {"Ajit Saste", "Pimpri", "nourghozzi9@gmail.com", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "nourghozzi9@gmail.com", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "nourghozzi9@gmail.com", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "nourghozzi9@gmail.com", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "nourghozzi9@gmail.com", "9898989840", "200"}
             };
     private final String[][] doctor_details4=
             {
-                    {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
-                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
-                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
-                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
-                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}  };
+                    {"Ajit Saste", "Pimpri", "nourghozzi9@gmail.com", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "nourghozzi9@gmail.com", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "nourghozzi9@gmail.com", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "nourghozzi9@gmail.com", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "nourghozzi9@gmail.com", "9898989840", "200"}  };
     private  final String[][] doctor_details5=
             {
-                    {"Ajit Saste", "Pimpri", "5 yrs", "9898989898", "600"},
-                    {"Amira Halouani", "Oxford", "15 yrs", "9898989890", "700"},
-                    {"Eya Siala", "Chinchwad", "8 yrs", "9898989860", "900"},
-                    {"Deepak Deshmukh", "Katraj", "6 yrs", "9898989850", "300"},
-                    {"Pierre Wajenberg", "Pume", "7 yrs", "9898989840", "200"}
+                    {"Ajit Saste", "Pimpri", "nourghozzi9@gmail.com", "9898989898", "600"},
+                    {"Amira Halouani", "Oxford", "nourghozzi9@gmail.com", "9898989890", "700"},
+                    {"Eya Siala", "Chinchwad", "nourghozzi9@gmail.com", "9898989860", "900"},
+                    {"Deepak Deshmukh", "Katraj", "nourghozzi9@gmail.com", "9898989850", "300"},
+                    {"Pierre Wajenberg", "Pume", "nourghozzi9@gmail.com", "9898989840", "200"}
             };
     TextView tv ;
     Button btn ;

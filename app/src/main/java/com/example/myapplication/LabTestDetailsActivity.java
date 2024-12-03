@@ -104,22 +104,22 @@ public class LabTestDetailsActivity extends AppCompatActivity {
 
         switch (productName) {
             case "Package1: Full Body Checkup":
-                price = 999;
+                price = 199;
                 break;
             case "Package2: Blood Glucose Fasting":
                 price = 299;
                 break;
             case "Package3: COVID-19 Antibody":
-                price = 899;
+                price = 399;
                 break;
             case "Package4: Thyroid Check":
                 price = 499;
                 break;
             case "Package5: Immunity Check":
-                price = 699;
+                price = 599;
                 break;
             default:
-                price = 0; // Produit non trouvé
+                price = 100; // Produit non trouvé
                 Toast.makeText(this, "Price not found for product: " + productName, Toast.LENGTH_SHORT).show();
         }
 

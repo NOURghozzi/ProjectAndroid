@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:background="#B180D2F7"
+        android:background="#8FC9F7"
         android:elevation="2dp"
         android:padding="16dp"
         android:textColor="#000000"
@@ -34,16 +34,15 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.991"
+        app:layout_constraintVertical_bias="1.0"
         tools:ignore="MissingConstraints">
 
 
         <ImageView
             android:id="@+id/iconProfile"
-
             android:layout_width="75dp"
             android:layout_height="56dp"
             android:layout_marginEnd="56dp"
@@ -62,11 +61,11 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="418dp"
-        android:layout_height="311dp"
+        android:layout_width="424dp"
+        android:layout_height="340dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"

@@ -64,5 +64,12 @@ public class HomeActivity extends AppCompatActivity {
             intent1.putExtra("username", username);  // Passez le username via l'Intent
             startActivity(intent1);  // Lancez l'Activity
         });
+        CardView appointment = findViewById(R.id.cardAppointment);
+        appointment.setOnClickListener(view -> {
+            // Créez l'Intent et ajoutez le username
+            Intent intent1 = new Intent(HomeActivity.this, AppointmentListActivity.class);
+            intent1.putExtra("username", username);  // Passez le username via l'Intent
+            startActivity(intent1);  // Lancez l'Activity
+        });
 
     }}

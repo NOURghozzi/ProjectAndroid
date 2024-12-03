@@ -1,11 +1,10 @@
 package com.example.myapplication;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -41,7 +40,6 @@ public class HealthArticleActivity extends AppCompatActivity {
     ArrayList<HashMap<String, String>> list;
     SimpleAdapter sa;
 
-    Button btnBck;
     ListView lst;
 
     @Override
@@ -50,12 +48,19 @@ public class HealthArticleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_health_article);
 
         lst = findViewById(R.id.listViewHA);
-        btnBck = findViewById(R.id.buttonHABack);
+        ImageView btnBck = findViewById(R.id.iconChat);
+        ImageView iconProfile = findViewById(R.id.iconProfile);
 
         btnBck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(HealthArticleActivity.this, HomeActivity.class));
+            }
+        });
+        iconProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(HealthArticleActivity.this, UserProfileActivity.class));
             }
         });
 

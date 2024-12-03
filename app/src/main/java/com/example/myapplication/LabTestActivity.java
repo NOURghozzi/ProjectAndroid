@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -29,7 +30,9 @@ public class LabTestActivity extends AppCompatActivity {
     private String[] packageDetails = {
             "Blood Glucose Fasting\nHbA1c\nIron Studies\nKidney Function Test\nLDH Lactate Dehydrogenase,",
             "Serum\nLipid Profile\nLiver Function Test",
-            "Lipid Profile"
+            "Lipid Profile",
+            "Serum\nLipid Profile\nLiver Function Test",
+            "\nIron Studies\nKidney Function Test\nLDH Lactate Dehydrogenase,"
     };
 
     private HashMap<String, String> item;
@@ -42,19 +45,26 @@ public class LabTestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lab_test);
+        ImageView btnBck = findViewById(R.id.iconChat);
+        ImageView iconProfile = findViewById(R.id.iconProfile);
 
-        // Initialize views
-        btnGoToCart = findViewById(R.id.buttonLDAddToCart);
-        btnBack = findViewById(R.id.buttonLTBack);
-        listView = findViewById(R.id.listViewLT);
-
-        // Set back button action
-        btnBack.setOnClickListener(new View.OnClickListener() {
+        btnBck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LabTestActivity.this, HomeActivity.class));
             }
         });
+        iconProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LabTestActivity.this, UserProfileActivity.class));
+            }
+        });
+        // Initialize views
+
+        listView = findViewById(R.id.listViewLT);
+
+
 
         // Prepare data for ListView
         list = new ArrayList<>();

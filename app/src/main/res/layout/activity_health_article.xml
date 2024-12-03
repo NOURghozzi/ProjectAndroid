@@ -44,18 +44,41 @@
         app:layout_constraintStart_toStartOf="@id/textViewHATitle"
         app:layout_constraintTop_toBottomOf="@+id/textViewHATitle" />
 
-    <Button
-        android:id="@+id/buttonHABack"
-        android:layout_width="168dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/button_background"
-        android:text="BACK"
-        android:textColor="@color/white"
+    <LinearLayout
+        android:id="@+id/topMenu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#BADCE6"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/listViewHA"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/listViewHA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listViewHA"
-        app:layout_constraintVertical_bias="0.494" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="56dp"
+            android:contentDescription="@string/profile"
+            android:padding="4dp"
+            android:src="@drawable/icons8" />
+
+        <ImageView
+            android:id="@+id/iconChat"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/chat"
+            android:padding="4dp"
+            android:src="@drawable/img_10" />
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

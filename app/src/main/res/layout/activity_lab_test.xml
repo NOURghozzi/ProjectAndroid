@@ -62,30 +62,42 @@
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-    <Button
-        android:id="@+id/buttonLTBack"
-        android:layout_width="168dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/button_background"
-        android:text="BACK"
-        android:textColor="@color/white"
+    <LinearLayout
+        android:id="@+id/topMenu"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#BADCE6"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewLT" />
+        app:layout_constraintTop_toBottomOf="@+id/listViewLT"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints">
 
-    <Button
-        android:id="@+id/buttonLDAddToCart"
-        android:layout_width="168dp"
-        android:layout_height="48dp"
-        android:backgroundTint="@color/button_background"
-        android:text="Go To Cart  "
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonLTBack"
-        app:layout_constraintHorizontal_bias="0.393"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listViewLT" />
+
+        <ImageView
+            android:id="@+id/iconProfile"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="56dp"
+            android:contentDescription="@string/profile"
+            android:padding="4dp"
+            android:src="@drawable/icons8" />
+
+        <ImageView
+            android:id="@+id/iconChat"
+            android:layout_width="75dp"
+            android:layout_height="56dp"
+            android:contentDescription="@string/chat"
+            android:padding="4dp"
+            android:src="@drawable/img_10" />
+    </LinearLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
